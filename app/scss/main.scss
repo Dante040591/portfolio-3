@@ -1,0 +1,537 @@
+@import '../../node_modules/reset-css/sass/reset';
+
+$font-os:'Open Sans', sans-serif;
+$font-rob: 'Roboto', sans-serif;
+$font-robs: 'Roboto Slab', serif;
+$color-main: #fff;
+$blue: #3D3BFF;
+
+
+@mixin price-block {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  font-family: $font-rob;
+  margin-top: 15px;
+}
+
+body {
+  color: $color-main;
+}
+
+
+.content {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+.left-block {
+  background: $blue;
+  width: 50%;
+  .course {
+    width: 500px;
+    margin-left: auto;
+    padding-left: 10px;
+    margin-bottom: 100px;
+    .logo {
+      margin-top: 45px;
+    }
+    .description h3 {
+      margin-top: 57px;
+      font-size: 13px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      font-family: $font-os;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      line-height: 26px;
+    }
+    .description h1 {
+      font-family: $font-rob;
+      font-weight: bold;
+      font-size: 38px;
+      line-height: 44px;
+      margin-top: 18px;
+      letter-spacing: -0.5;
+    }
+    .description p {
+      margin-top: 20px;
+      font-style: 15px;
+      font-family: $font-os;
+      opacity: 0.7;
+      font-weight: 300;
+      line-height: 26px;
+    }
+    .price {
+      margin-top: 44px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    span {
+      font-size: 50px;
+      font-family: $font-robs;
+      font-weight: 300;
+    }
+    .price-from {
+      width: 43%;
+      opacity: 0.5;
+      p {
+        @include price-block;
+        position: relative;
+      }
+    }
+    .price-from .line {
+      position: relative;
+    }
+    .price-from .line::after {
+      content: '';
+      width: 150px;
+      position: absolute;
+      border-bottom: 2px solid #fff;
+      opacity: 0.8;
+      top: 33px;
+      left: 0;
+    }
+    .price-to {
+      width: 50%;
+      opacity: 0.8;
+      p {
+        @include price-block;
+      }
+      .price-to-percent {
+        font-weight: bold;
+        font-size: 23px;
+      }
+    }
+    .price-credit {
+      width: 43%;
+      margin-top: 38px;
+      p {
+        @include price-block;
+      }
+    }
+    .price-clients {
+      width: 50%;
+      margin-top: 38px;
+      margin-top: 45px;
+      p {
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 22px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        font-family: $font-os;
+      }
+      span {
+        font-weight: bold;
+        font-size: 23px;
+      }
+      .price-clients-img {
+        position: relative;
+        img {
+          border-radius: 50px;
+          border: 1px solid #F7334A;
+        }
+        img:nth-child(2) {
+          transform: translateX(-25px);
+        }
+        img:nth-child(3) {
+          transform: translateX(-45px);
+        }
+        img:nth-child(4) {
+          transform: translateX(-65px);
+        }
+        img:nth-child(5) {
+          transform: translateX(-85px);
+        }
+      }
+    }
+    .price-sym {
+      font-size: 55px;
+    }
+  }
+}
+
+.clock {
+  display: flex;
+  width: 200px;
+  margin-left: 59px;
+  transform: translateY(-4px);
+}
+.clock .timer {
+  margin-left: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 42px;
+  font-size: 30px;
+  letter-spacing: -0.5px;
+  color: #000000;
+}
+.timer.blue {
+  color: $blue;
+}
+
+.right-block {
+  background: $color-main;
+  width: 50%;
+  color: #000000;
+  padding-right: 10px;
+  .right-form {
+    margin-left: 95px;
+    padding-top: 42px;
+    .header {
+      display: flex;
+      h3 {
+        font-size: 20px;
+        font-family: $font-os;
+        color: #657195;
+        line-height: 32px;
+        letter-spacing: -0.5px;
+      }
+    }
+    .sale h2 {
+      color: #000000;
+      font-size: 30px;
+      line-height: 42px;
+      letter-spacing: -0.5px;
+      font-weight: bold;
+      font-family: $font-rob;
+      margin-top: 40px;
+    }
+    .main-form {
+      margin-top: 27px;
+      width: 393px;
+      .form-inputs{
+
+        input {
+          height: 60px;
+          font-size: 15px;
+          line-height: 28px;
+          font-family: $font-os;
+          color: #657195;
+          padding-left: 20px;
+          margin-top: 20px;
+          width: 393px;
+          border: 2px solid #E6E8F0;
+          &:focus {
+            outline: none;
+            border-color: #3D3BFF;
+          }
+          &:focus + label {
+            transform: translateX(-10px);
+          }
+        }
+      }
+      .send-btn {
+        margin-top: 32px;
+        width: 214px;
+        height: 60px;
+        background: #000000;
+        color: #fff;
+        font-family: $font-os;
+        line-height: normal;
+        font-size: 13px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 600;
+        border: none;
+        transition: all 500ms;
+        cursor: pointer;
+        &:focus {
+          outline: none!important;
+          box-shadow: 0;
+        }
+        &::-moz-focus-inner {
+          border: 0 !important;
+        }
+        &:hover {
+          background: #3D3BFF;
+        }
+      }
+      .check {
+        input[type = 'checkbox'] {
+          display: none;
+        }
+        label {
+          position: relative;
+          padding-left: 20px;
+          &::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            border: 1px solid $blue;
+            top: 16px;
+            left: 0;
+          }
+          &::after {
+            content: '';
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 16px;
+            left: 0;
+            background: $blue url("../img/check.png") center no-repeat;
+            display: none;
+          }
+        }
+        input[type='checkbox']:checked + label::after {
+          display: block;
+        }
+        p{
+          font-family: $font-os;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 22px;
+          font-size: 14px;
+          letter-spacing: -0.466667px;
+          color: #3D3BFF;
+          margin-left: 40px;
+        }
+        span {
+          opacity: 0.7;
+          color: #657195;
+        }
+      }
+    }
+  }
+}
+.error {
+  color: #F7334A;
+  font-size: 11px;
+  font-family: $font-os;
+}
+
+
+
+// Большие девайсы (большие десктопы, < 1200px)
+@media (max-width: 1199.98px) {
+  .right-block .right-form {
+    margin-left: 35px;
+  }
+  .left-block .course .description h3 {
+    margin-top: 0;
+  }
+  .right-block {
+    padding-right: 0;
+  }
+  .left-block .course {
+    width: 461px;
+    padding-left: 35px;
+    margin-left: 0;
+  }
+  .left-block .course .price-from p::after {
+    right: 48px;
+  }
+  .left-block .course .price-clients .price-clients-img img:nth-child(5) {
+    transform: translate(112px, -48px);
+  }
+  .left-block .course .price-clients .price-clients-img {
+    height: 48px;
+  }
+}
+
+// Средние девайсы («таблетки», < 992px)
+@media (max-width: 991.98px) {
+  .content {
+    display: block;
+  }
+  .left-block {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .left-block .course {
+    /* width: 500px; */
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0
+  }
+  .left-block .course .logo {
+    margin-top: 0px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .left-block .course .description h3 {
+    text-align: center;
+  }
+  .left-block .course .description h1 {
+    text-align: center;
+  }
+  .left-block .course .description p {
+    text-align: center;
+  }
+  .left-block .course {
+    width: 100%;
+  }
+  .left-block .course .price {
+    margin-top: 30px;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .left-block .course .price-clients .price-clients-img img:nth-child(5) {
+    transform: translate(-85px, 0px);
+  }
+  .left-block .course .price-from,
+  .left-block .course .price-to,
+  .left-block .course .price-credit,
+  .left-block .course .price-clients {
+    width: 50%;
+  }
+  .left-block .course .price-credit,
+  .left-block .course .price-clients {
+    margin-top: 15px;
+  }
+  .left-block .course .price-clients .price-clients-img {
+    margin-top: 8px;
+    transform: translateX(45px);
+  }
+  .left-block .course .price-clients p {
+    margin-top: 13px;
+  }
+
+  .right-block {
+    width: 100%;
+  }
+  .right-form {
+    margin-left: 0;
+  }
+
+  .right-block .right-form {
+    margin-left: 0;
+  }
+
+  .right-block .right-form .header .timer {
+    margin-left: 0;
+  }
+
+  .right-block .right-form .header {
+    display: block;
+    text-align: center;
+  }
+  .right-block .right-form .sale h2 {
+    text-align: center;
+    margin-top: 5px;
+  }
+  .right-block .right-form .main-form {
+    width: 100%;
+    text-align: center;
+  }
+  .right-block .right-form .main-form .check label::after,
+  .right-block .right-form .main-form .check label::before {
+    left: -200px;
+  }
+
+  .right-block .right-form .main-form .check p {
+    margin:0 auto 0 auto;
+    text-align: left;
+    width: 335px;
+  }
+  .right-block .right-form .main-form .form-inputs input {
+    display: block;
+    margin: 20px auto 0px auto;
+  }
+  .right-block .right-form .main-form {
+    padding-bottom: 40px;
+  }
+  .clock{
+    text-align: center;
+    margin:15px auto 0 auto;
+    width: 130px;
+  }
+}
+
+// Малые девайсы («ландшафтные», < 768px)
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 498px) {
+  .left-block .course .price {
+    .left-block .course .price-clients .price-clients-img {
+      margin-top: 20px;
+    }
+    .left-block .course .price-credit,
+    .left-block .course .price-clients {
+      margin-top: 10px;
+    }
+  }
+  .right-block .right-form .sale h2 {
+    margin-top: 25px;
+  }
+  .right-block .right-form .main-form .form-inputs input {
+    height: 45px;
+    width: 325px;
+  }
+  .right-block .right-form .main-form .check p {
+    width: 270px;
+  }
+  .right-block .right-form .main-form .check label::after, .right-block .right-form .main-form .check label::before {
+    left: -165px;
+    top: 20px;
+    width: 19px;
+    height: 19px;
+  }
+}
+
+@media (max-width: 498px) {
+  .left-block .course .price {
+    display: block;
+    margin: 15px auto 0px auto;
+  }
+  .left-block .course .price-from,
+  .left-block .course .price-to,
+  .left-block .course .price-credit,
+  .left-block .course .price-clients {
+    width: 100%;
+  }
+
+  .left-block .course span {
+    font-size: 40px;
+  }
+  .left-block .course .price-sym {
+    font-size: 45px;
+  }
+  .left-block .course .price-from p,
+  .left-block .course .price-to p,
+  .left-block .course .price-credit p {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  .left-block .course .price-credit {
+    margin-top: 5px;
+  }
+  .left-block .course .price-to .price-to-percent {
+    font-size: 17px;
+  }
+  .left-block .course .price-from .line::after {
+    width: 120px;
+    top: 27px;
+  }
+  .right-block .right-form .sale h2 {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .right-block .right-form .sale h2 {
+    font-size: 22px;
+  }
+  .right-block .right-form .main-form .form-inputs input {
+    width: 260px;
+  }
+  .right-block .right-form .main-form .check p {
+    margin: 0 0 0 60px;
+  }
+  .right-block .right-form .main-form .check label::after, .right-block .right-form .main-form .check label::before {
+    left: -132px;
+  }
+  .right-block .right-form .main-form .send-btn {
+    width: 190px;
+    height: 40px;
+  }
+}
